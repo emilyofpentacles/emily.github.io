@@ -1,9 +1,90 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emily Leonick Developer Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,500;1,300;1,500&family=Rubik:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
 <body>
-  <h1>EMILY'S CODEACADEMY PROJECT</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-</body>
 
+   <header>
+    <div class="header-content">
+      <h1>Emily Leonick</h1>
+      <p>Web Developer | Full-Stack Student</p>
+    </div>
+    <div class="profile-image">
+      <img src="https://pbs.twimg.com/profile_images/1706735208370769920/ZPQdAIbQ_400x400.jpg" alt="Profile Image">
+    </div>
+  </header>
+
+  <main>
+ <section>
+  <h2>About Me</h2>
+  <p>
+    Hello there! I'm <b color="rebeccapurple">Emily</b>, a passionate and versatile developer currently immersed in a full-stack development course. My journey into the world of technology began in the exciting realm of video game production, where I served as a producer, orchestrating the creation of captivating digital experiences.<p>
+
+    Eager to expand my skills and delve deeper into the realm of development, I've embarked on a journey to become a well-rounded full-stack developer. My enthusiasm for learning and creating cool things fuels my commitment to mastering various technologies and frameworks.<p>
+
+    Whether it's crafting engaging video game narratives or architecting robust web applications, I bring a unique blend of creativity and technical expertise to the table. I thrive on challenges, continuously seeking opportunities to enhance my knowledge and contribute to innovative projects.<p>
+
+    Join me on this adventure as I explore the ever-evolving landscape of technology, turning ideas into reality and creating digital wonders. Let's build something amazing together!
+  </p>
+</section>
+
+
+    <section>
+      <h2>Skills</h2>
+       <ul> 
+         <li>C++</i> 
+        <li>C#</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+        <li>Git</li>
+        <li>Unity</li></ul>
+    </section>
+
+      <section>
+      <h2>Projects</h2>
+      <div class="project" onclick="toggleProject(this)">
+        <h3>Cozy Game Generator</h3>
+        <p>To complete a CodeAcademy project, I built a random game suggestion generator using Javascript.<br><br><a href="https://github.com/emilyofpentacles/suggestion-generator">View Project on GitHub</a></p>
+      </div>
+
+      <div class="project" onclick="toggleProject(this)">
+        <h3>Mole Unearther</h3>
+        <p>Using Phaser.js, I created a small game.<br><br><a href="https://github.com/emilyofpentacles/moleunearther">View Project on GitHub</a></p>
+        
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: <a href="mailto:emily.leonick@gmail.com">emily.leonick@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/emilyleonick">LinkedIn Profile</a></li>
+        <li>GitHub: <a href="https://github.com/emilyofpentacles">GitHub Profile</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with <span class="heart">♥</span> in Seattle</p>
+  </footer>
+  <script src="script.js">function toggleProject(project) {
+    project.classList.toggle('active');
+    const projectDescription = project.querySelector('p');
+    if (project.classList.contains('active')) {
+      projectDescription.style.height = projectDescription.scrollHeight + 'px';
+      projectDescription.style.opacity = '1';
+    } else {
+      projectDescription.style.height = '0';
+      projectDescription.style.opacity = '0';
+    }
+  }</script>
+</body>
 </html>
