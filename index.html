@@ -75,16 +75,24 @@
   <footer>
     <p>Made with <span class="heart">♥</span> in Seattle</p>
   </footer>
-  <script src="script.js">function toggleProject(project) {
-    project.classList.toggle('active');
-    const projectDescription = project.querySelector('p');
-    if (project.classList.contains('active')) {
-      projectDescription.style.height = projectDescription.scrollHeight + 'px';
-      projectDescription.style.opacity = '1';
-    } else {
-      projectDescription.style.height = '0';
-      projectDescription.style.opacity = '0';
+  <script src="script.js">// Function to toggle project content visibility
+    function toggleDescription(header) {
+      var projectContent = header.nextElementSibling;
+
+      // Toggle the visibility of the project description
+      if (projectContent.style.display === 'none' || projectContent.style.display === '') {
+        projectContent.style.display = 'block';
+      } else {
+        projectContent.style.display = 'none';
+      }
     }
-  }</script>
+
+    // Attach click event listeners to all project headers
+    var projectHeaders = document.querySelectorAll('.project h3');
+    for (var i = 0; i < projectHeaders.length; i++) {
+      projectHeaders[i].addEventListener('click', function() {
+        toggleDescription(this);
+      });
+    }</script>
 </body>
 </html>
